@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: -5494274640509211296}
   - component: {fileID: 977136688353427947}
   - component: {fileID: -811161664533228820}
-  - component: {fileID: 7033947362199317654}
+  - component: {fileID: -1414388277134629720}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -215,6 +215,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0f57e3ee8f9c4a41862536770851206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterAnimator: {fileID: 1665921050}
+  characterTr: {fileID: 7118307570661630549}
+  characterNavMesh: {fileID: -1414388277134629720}
+  joystick: {fileID: 0}
+  _MoveSpeed: 0.15
+  _RotateSpeed: 0.25
 --- !u!114 &977136688353427947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,22 +247,28 @@ CapsuleCollider:
   m_Height: 1.9185361
   m_Direction: 1
   m_Center: {x: -0.0037186146, y: 0.95926803, z: 0}
---- !u!54 &7033947362199317654
-Rigidbody:
+--- !u!195 &-1414388277134629720
+NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7033947362199317738}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 116
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &8545867121877378101
 PrefabInstance:
   m_ObjectHideFlags: 0
