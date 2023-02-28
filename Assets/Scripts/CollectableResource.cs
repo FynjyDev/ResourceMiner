@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CollectableResource : MonoBehaviour
@@ -14,7 +15,8 @@ public class CollectableResource : MonoBehaviour
     private void Start()
     {
         _IsCollectable = false;
-        resourceBody.AddForce(Vector3.up * _ImpulseSpeed, ForceMode.Impulse);
+
+        SetImpulse();
         StartCoroutine(CollectDelay());
     }
 
@@ -29,5 +31,17 @@ public class CollectableResource : MonoBehaviour
         if (!_IsCollectable || !other.GetComponent<CharacterCollision>()) return;
 
         Destroy(gameObject);
+    }
+
+    private void SetImpulse()
+    {
+        List<float> _directionConstants = new List<float>() { -0.2f, 0.2f };
+
+        float x = _directionConstants[Random.Range(0, _directionConstants.Count)];
+        float z = _directionConstants[Random.Range(0, _directionConstants.Count)];
+
+        Vector3 _impulseDirection = new Vector3(x, 1, z);
+
+        resourceBody.AddForce(_impulseDirection * _ImpulseSpeed, ForceMode.Impulse);
     }
 }
