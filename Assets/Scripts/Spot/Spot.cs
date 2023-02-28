@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Spot : MonoBehaviour
@@ -37,6 +36,4 @@ public class Spot : MonoBehaviour
         _TempHitCount = 0;
         isOnRecovery = false;
     }
-
-
 }
