@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 2426254911716910214}
   - component: {fileID: 2426254911716910213}
   m_Layer: 0
-  m_Name: Resource Point Empty
+  m_Name: _Resource Point Empty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

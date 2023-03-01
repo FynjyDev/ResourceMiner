@@ -6,7 +6,7 @@ public class CollectableResource : MonoBehaviour
 {
     public ResourceController.ResourceTypes resourceType;
 
-    [HideInInspector] public Spot spot;
+     public Spot spot;
 
     public Rigidbody resourceBody;
     public BoxCollider collectTrigger;

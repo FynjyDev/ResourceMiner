@@ -12,7 +12,7 @@ public class Spot : MonoBehaviour
     public CollectableResource spotResourcePrefab;
     public Transform spotResourceSpawnPos;
 
-    [HideInInspector] public ResourceController resourceController;
+    public ResourceController resourceController;
 
     public int tempHitCount;
     public int maxHitCount => Settings.s.maxHitCount;
