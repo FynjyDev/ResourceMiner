@@ -13,4 +13,8 @@ public class SettingsAsset : ScriptableObject
     [Header("Collectable Resource Settings")]
     public float impulseSpeed;
     public float collectDelay;
+
+    [Header("UI Settings")]
+    public AnimationCurve elementsMoveCurve;
+    public float elementsMoveTime;
 }

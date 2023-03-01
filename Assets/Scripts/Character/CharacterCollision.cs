@@ -12,14 +12,12 @@ public class CharacterCollision : MonoBehaviour
         characterMovement.characterAnimator.SetFloat("ExtractSpeed", _ExtractSpeed);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (!other.GetComponent<Spot>()) return;
-        _Spot = other.GetComponent<Spot>();
-    }
-
     private void OnTriggerStay(Collider other)
     {
+        if (!other.GetComponent<Spot>()) return;
+
+        _Spot = other.GetComponent<Spot>();
+
         bool _isExtract = _Spot != null && !characterMovement.joystick.isMove && !_Spot.isOnRecovery;
 
         characterMovement.characterAnimator.SetBool("IsExtract", _isExtract);

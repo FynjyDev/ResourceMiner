@@ -14,6 +14,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   extractSpeed: 1
   pointRecoveryTime: 5
-  maxHitCount: 5
-  impulseSpeed: 10
+  maxHitCount: 10
+  impulseSpeed: 7
   collectDelay: 5
+  elementsMoveCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0.8749912
+      outSlope: 0.8749912
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.079166666
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -0.6495864
+      outSlope: -0.6495864
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.054166675
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  elementsMoveTime: 0.5

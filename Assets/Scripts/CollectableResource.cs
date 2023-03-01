@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CollectableResource : MonoBehaviour
 {
+    public ResourceController.ResourceTypes resourceType;
+
+    [HideInInspector] public Spot spot;
+
     public Rigidbody resourceBody;
     public BoxCollider collectTrigger;
 
@@ -29,7 +33,14 @@ public class CollectableResource : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (!_IsCollectable || !other.GetComponent<CharacterCollision>()) return;
+        OnCollect();
+    }
 
+    private void OnCollect()
+    {
+        _IsCollectable = false;
+
+        spot.resourceController.OnResourceCollect(resourceType);
         Destroy(gameObject);
     }
 
