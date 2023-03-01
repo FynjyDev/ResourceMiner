@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 590315178132196773, guid: 46884e47db9f33a4ebb042fbbe2a111e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 590315178132196773, guid: 46884e47db9f33a4ebb042fbbe2a111e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2426254910848168726, guid: 46884e47db9f33a4ebb042fbbe2a111e, type: 3}
       propertyPath: m_LocalPosition.y
       value: 3.83
@@ -63,6 +71,14 @@ PrefabInstance:
       propertyPath: spotResourcePrefab
       value: 
       objectReference: {fileID: 7710634238549922797, guid: adbda7b677e7bc3499845c358eb00bfc, type: 3}
+    - target: {fileID: 7792496049018117558, guid: 46884e47db9f33a4ebb042fbbe2a111e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792496049018117558, guid: 46884e47db9f33a4ebb042fbbe2a111e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 0}

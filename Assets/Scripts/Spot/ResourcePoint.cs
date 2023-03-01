@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ResourcePoint : Spot
 {
+    public ParticleSystem hitFX;
     public HealthBar healthBar;
 
     private void Start()
@@ -14,7 +15,9 @@ public class ResourcePoint : Spot
     public override void SpawnResource()
     {
         base.SpawnResource();
+
         healthBar.ChangeValue(maxHitCount - tempHitCount);
+        hitFX.Play();
     }
 
     public override IEnumerator RecoverySpot()

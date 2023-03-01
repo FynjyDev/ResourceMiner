@@ -590,6 +590,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3777264060773726116, guid: b791497310389cd41b300483262de527, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3777264060773726116, guid: b791497310389cd41b300483262de527, type: 3}
+      propertyPath: OnlyDeactivate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4578637775776603250, guid: b791497310389cd41b300483262de527, type: 3}
       propertyPath: m_Name
       value: Resource Point Wood Variant
