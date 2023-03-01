@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.65080994, g: 0.666729, b: 0.7075472, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.05
@@ -590,7 +590,7 @@ MonoBehaviour:
   m_IsGlobal: 1
   priority: 0
   blendDistance: 0
-  weight: 1
+  weight: 0.666
   sharedProfile: {fileID: 11400000, guid: 10fc4df2da32a41aaa32d77bc913491c, type: 2}
 --- !u!4 &653260038
 Transform:
@@ -1361,13 +1361,41 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 1839479119}
+    - target: {fileID: 1009071612, guid: 8bf0ce82b4bd9f94b9904f56b9cc699b, type: 3}
+      propertyPath: m_FollowOffset.y
+      value: 15.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009071612, guid: 8bf0ce82b4bd9f94b9904f56b9cc699b, type: 3}
+      propertyPath: m_FollowOffset.z
+      value: -14.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818009764, guid: 8bf0ce82b4bd9f94b9904f56b9cc699b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818009764, guid: 8bf0ce82b4bd9f94b9904f56b9cc699b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818009764, guid: 8bf0ce82b4bd9f94b9904f56b9cc699b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818009764, guid: 8bf0ce82b4bd9f94b9904f56b9cc699b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.91990596
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818009764, guid: 8bf0ce82b4bd9f94b9904f56b9cc699b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.39213908
+      objectReference: {fileID: 0}
     - target: {fileID: 1818009764, guid: 8bf0ce82b4bd9f94b9904f56b9cc699b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000015648501
+      value: -0.000000015820543
       objectReference: {fileID: 0}
     - target: {fileID: 1818009764, guid: 8bf0ce82b4bd9f94b9904f56b9cc699b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000007154286
+      value: 0.0000000067440076
       objectReference: {fileID: 0}
     - target: {fileID: 977136688353427947, guid: 8bf0ce82b4bd9f94b9904f56b9cc699b, type: 3}
       propertyPath: characterMovement
@@ -1505,8 +1533,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687258581}
-  m_LocalRotation: {x: 0.4157927, y: -0.000000015648501, z: 0.000000007154286, w: 0.9094594}
-  m_LocalPosition: {x: 0, y: 11.56, z: -10}
+  m_LocalRotation: {x: 0.39213908, y: -0.000000015820543, z: 0.0000000067440076, w: 0.91990596}
+  m_LocalPosition: {x: 0, y: 15.42, z: -14.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2336,7 +2364,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.658
     m_Bias: 0.02
     m_NormalBias: 0.1
     m_NearPlane: 0.1
