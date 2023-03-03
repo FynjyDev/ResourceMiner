@@ -4,34 +4,74 @@ using UnityEngine;
 
 public class ResourcePoint : Spot
 {
+    [Header("Resource Point Pharameters")]
+
     public ParticleSystem hitFX;
-    public HealthBar healthBar;
+    public ResourcePointHelth resourcePointHelth;
+
+     public int tempHitCount;
 
     private void Start()
     {
-        healthBar.Init(maxHitCount);
+        resourcePointHelth.Init(maxHitCount);
+    }
+
+    public override void OnPlayerStay()
+    {
+        if (characterCollision)
+        {
+            if (!isEnabled)
+            {
+                characterCollision.activeSpot = this;
+                characterCollision.SetExtractAnimation(true);
+            }
+            else
+            {
+                characterCollision.activeSpot = null;
+                characterCollision.SetExtractAnimation(false);
+            }
+        }
+
+        base.OnPlayerStay();
+    }
+
+    public override void OnPlayerExit()
+    {
+        characterCollision.activeSpot = null;
+        characterCollision.SetExtractAnimation(false);
+
+        characterCollision = null;
+
+        base.OnPlayerExit();
     }
 
     public override void SpawnResource()
     {
-        base.SpawnResource();
+        if (tempHitCount < maxHitCount)
+        {
+            base.SpawnResource();
 
-        healthBar.ChangeValue(maxHitCount - tempHitCount);
-        hitFX.Play();
+            resourcePointHelth.ChangeValue(maxHitCount - tempHitCount);
+            hitFX.Play();
+
+            tempHitCount++;
+        }
+        else StartCoroutine(SpotDelay());
+       
     }
 
-    public override IEnumerator RecoverySpot()
+    public IEnumerator SpotDelay()
     {
-        isOnRecovery = true;
+        isEnabled = true;
 
         while (tempHitCount > 0)
         {
             tempHitCount--;
-            healthBar.ChangeValue(maxHitCount - tempHitCount);
+            resourcePointHelth.ChangeValue(maxHitCount - tempHitCount);
 
             yield return new WaitForSeconds(recoveryTime / maxHitCount);
         }
 
-        isOnRecovery = false;
+        isEnabled = false;
     }
 }

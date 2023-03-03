@@ -12,21 +12,22 @@ public class UiController : MonoBehaviour
     private AnimationCurve ElementsMoveCurve => Settings.s.elementsMoveCurve;
     private float _ElementsMoveTime => Settings.s.elementsMoveTime;
 
-    public void UpdateResourceValue(ResourceController.ResourceTypes _resourceType)
+    public void UpdateResourceValue(ResourceController.ResourceTypes _resourceType, bool _isAdd)
     {
         ResourceVizualization _res = GetVizualizationByType(_resourceType);
-
-
-        SpawnMoveElements(_res);
+        SpawnMoveElements(_res, _isAdd);
     }
 
-    private void SpawnMoveElements(ResourceVizualization _res)
+    private void SpawnMoveElements(ResourceVizualization _res, bool _isAdd)
     {
-        MovementElementUI newElement = Instantiate(_res.movementUIElementPrefabs, _res.startPos.position, Quaternion.identity, transform);
+        Vector3 spawnPos = _isAdd == true ? _res.startPos.position : _res.finalPos.position; 
+        Vector3 finalPos = _isAdd == true ? _res.finalPos.position : _res.startPos.position;
+
+        MovementElementUI newElement = Instantiate(_res.movementUIElementPrefabs, spawnPos, Quaternion.identity, transform);
 
         MovementElementUI.endMovementDelegate += OnValueUpdate;
-        
-        newElement.StartCoroutine(newElement.Move(_ElementsMoveTime, ElementsMoveCurve, _res));
+
+        newElement.StartCoroutine(newElement.Move(_ElementsMoveTime, ElementsMoveCurve, _res, finalPos));
     }
 
     private void OnValueUpdate(ResourceVizualization _res)

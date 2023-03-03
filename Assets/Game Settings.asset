@@ -15,6 +15,12 @@ MonoBehaviour:
   extractSpeed: 1
   pointRecoveryTime: 5
   maxHitCount: 10
+  takeResourcesSpawnDelay: 0.5
+  takeResourcesMoveTime: 0.5
+  delayBeforeGiveResources: 5
+  giveResourcesDelay: 0.2
+  takeResourcesCount: 10
+  giveResourcesCount: 5
   impulseSpeed: 7
   collectDelay: 5
   elementsMoveCurve:

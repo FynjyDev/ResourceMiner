@@ -4,7 +4,7 @@ public class CharacterCollision : MonoBehaviour
 {
     public CharacterMovement characterMovement;
 
-    private Spot _Spot;
+    public Spot activeSpot;
     private float _ExtractSpeed => Settings.s.extractSpeed;
 
     private void Start()
@@ -12,24 +12,19 @@ public class CharacterCollision : MonoBehaviour
         characterMovement.characterAnimator.SetFloat("ExtractSpeed", _ExtractSpeed);
     }
 
-    private void OnTriggerStay(Collider other)
+    public void SetExtractAnimation(bool _isExtract)
     {
-        if (!other.GetComponent<Spot>()) return;
-
-        _Spot = other.GetComponent<Spot>();
-
-        bool _isExtract = _Spot != null && !characterMovement.joystick.isMove && !_Spot.isOnRecovery;
-
         characterMovement.characterAnimator.SetBool("IsExtract", _isExtract);
     }
 
     public void AddResources()
     {
-        _Spot.SpawnResource();
-    }
+        if (!activeSpot || activeSpot.characterCollision == null || activeSpot.characterCollision != this)
+        {
+            SetExtractAnimation(false);
+            return;
+        }
 
-    public void RemoveResource()
-    {
-
+        activeSpot.SpawnResource();
     }
 }

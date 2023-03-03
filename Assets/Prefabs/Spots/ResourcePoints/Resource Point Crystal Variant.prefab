@@ -307,6 +307,10 @@ PrefabInstance:
       propertyPath: spotResourcePrefab
       value: 
       objectReference: {fileID: 7710634238549922797, guid: 456c9a5af3397964180fc0626f6a5261, type: 3}
+    - target: {fileID: 2426254911716910214, guid: 46884e47db9f33a4ebb042fbbe2a111e, type: 3}
+      propertyPath: spotGiveResourcePrefab
+      value: 
+      objectReference: {fileID: 7710634238549922797, guid: 456c9a5af3397964180fc0626f6a5261, type: 3}
     - target: {fileID: 5733143560626250775, guid: 46884e47db9f33a4ebb042fbbe2a111e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 2.32

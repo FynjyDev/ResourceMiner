@@ -71,6 +71,10 @@ PrefabInstance:
       propertyPath: spotResourcePrefab
       value: 
       objectReference: {fileID: 7710634238549922797, guid: 87c9c513e84c38e4cbe9cd5fde983926, type: 3}
+    - target: {fileID: 2426254911716910214, guid: 46884e47db9f33a4ebb042fbbe2a111e, type: 3}
+      propertyPath: spotGiveResourcePrefab
+      value: 
+      objectReference: {fileID: 7710634238549922797, guid: 87c9c513e84c38e4cbe9cd5fde983926, type: 3}
     - target: {fileID: 7792496049018117558, guid: 46884e47db9f33a4ebb042fbbe2a111e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

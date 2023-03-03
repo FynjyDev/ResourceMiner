@@ -10,7 +10,7 @@ public class MovementElementUI : MonoBehaviour
     public bool isDestroyOnEnd;
     public float rotateAngle;
 
-    public IEnumerator Move(float time, AnimationCurve animCurve, ResourceVizualization _res)
+    public IEnumerator Move(float time, AnimationCurve animCurve, ResourceVizualization _res, Vector3 finalPos)
     {
         float startRotation = transform.eulerAngles.z;
         float endRotation = startRotation + rotateAngle;
@@ -21,7 +21,7 @@ public class MovementElementUI : MonoBehaviour
 
         while (_elapsedTime < time)
         {
-            Move(_startingPos, _res.finalPos.position, _elapsedTime / time, animCurve);
+            Move(_startingPos, finalPos, _elapsedTime / time, animCurve);
             if (rotateAngle != 0) Rotate(startRotation, endRotation, _elapsedTime / time);
 
             _elapsedTime += Time.deltaTime;

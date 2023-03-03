@@ -40,7 +40,7 @@ public class CollectableResource : MonoBehaviour
     {
         _IsCollectable = false;
 
-        spot.resourceController.OnResourceCollect(resourceType);
+        spot.resourceController.OnResourceValueChange(resourceType, true);
         Destroy(gameObject);
     }
 

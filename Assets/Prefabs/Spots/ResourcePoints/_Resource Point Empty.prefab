@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 2426254911716910212}
   - component: {fileID: 2426254911716910214}
   - component: {fileID: 2426254911716910213}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: _Resource Point Empty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,13 +81,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spotType: 0
-  isOnRecovery: 0
-  spotResourcePrefab: {fileID: 7710634238549922793, guid: adbda7b677e7bc3499845c358eb00bfc, type: 3}
-  spotResourceSpawnPos: {fileID: 2426254910848168726}
+  characterCollision: {fileID: 0}
+  spotGiveResourcePrefab: {fileID: 0}
   resourceController: {fileID: 0}
-  tempHitCount: 0
+  spotResourceSpawnPos: {fileID: 2426254910848168726}
+  isEnabled: 0
   hitFX: {fileID: 3047484038205940695}
-  healthBar: {fileID: 341340519713163762}
+  resourcePointHelth: {fileID: 341340519713163762}
+  tempHitCount: 0
 --- !u!65 &2426254911716910213
 BoxCollider:
   m_ObjectHideFlags: 0

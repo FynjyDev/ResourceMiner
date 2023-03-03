@@ -9,12 +9,14 @@ public class ResourceController : MonoBehaviour
 
     public List<ResourceInfo> resourceInfos;
 
-    public void OnResourceCollect(ResourceTypes _resourceType)
+    public void OnResourceValueChange(ResourceTypes _resourceType, bool _isAdd)
     {
         ResourceInfo _res = GetInfoByType(_resourceType);
-        _res.resourceCount++;
+        
+        if(_isAdd) _res.resourceCount++;
+        else _res.resourceCount--;
 
-        uiController.UpdateResourceValue(_resourceType);
+        uiController.UpdateResourceValue(_resourceType, _isAdd);
     }
 
     public ResourceInfo GetInfoByType(ResourceTypes _resourceType)
