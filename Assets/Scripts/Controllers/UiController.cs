@@ -30,13 +30,12 @@ public class UiController : MonoBehaviour
         newElement.StartCoroutine(newElement.Move(_ElementsMoveTime, ElementsMoveCurve, _res, finalPos));
     }
 
-    private void OnValueUpdate(ResourceVizualization _res)
+    public void OnValueUpdate(ResourceVizualization _res)
     {
         _res.resourceCountText.text = resourceController.GetInfoByType(_res.resourceType).resourceCount.ToString();
     }
 
-
-    private ResourceVizualization GetVizualizationByType(ResourceController.ResourceTypes _resourceType)
+    public ResourceVizualization GetVizualizationByType(ResourceController.ResourceTypes _resourceType)
     {
         for (int i = 0; i < resourceVizualizations.Count; i++)
         {

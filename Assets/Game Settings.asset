@@ -22,7 +22,7 @@ MonoBehaviour:
   takeResourcesCount: 10
   giveResourcesCount: 5
   impulseSpeed: 7
-  collectDelay: 5
+  collectDelay: 2
   elementsMoveCurve:
     serializedVersion: 2
     m_Curve:
